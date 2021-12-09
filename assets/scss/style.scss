@@ -1,0 +1,148 @@
+/* You can add global styles to this file, and also import other style files */
+@import "variables.scss";
+@import "reset.scss";
+@import "fonts.scss";
+@import "fonts-Nunito.scss";
+
+
+//  Headers
+// Common Header 1
+.common-header1 {
+  .navbar-brand img{
+    width: 100px;
+  }
+  .navbar-nav {
+    .nav-item{
+      &.active{
+        .nav-link{
+          color: $blue;
+          border-bottom: 3px solid $blue;
+        }
+      }
+      .nav-link {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        text-transform: uppercase;
+        &::after {
+          display: none;
+        }
+      }
+      a.nav-link.dropdown-toggle {
+        color: $text-500 !important;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 992px) {
+  .common-header1 {
+    .navbar-collapse {
+      border-radius: 0.375rem;
+      box-shadow: 0 1.5rem 4rem rgb(22 28 45 / 15%);
+      padding: 20px 0 0 0;
+      position: relative;
+      top: -40px;
+      background-color: $white;
+      max-height: 96vh;
+      .navbar-toggler,
+      .text-wrapper {
+        display: none;
+      }
+      .navbar-nav {
+        .nav-link {
+          padding: 30px 0 0 0;
+          text-align: center;
+        }
+      }
+      .lift {
+        width: 100%;
+        padding: 10px;
+        border-radius: 0;
+        font-size: 20px;
+      }
+    }
+    .navbar-toggler {
+      border: none;
+      &:focus {
+        outline: none;
+        box-shadow: none;
+      }
+      &[aria-expanded="true"] {
+        position: relative;
+        z-index: 1;
+        .navbar-toggler-icon {
+          background-image: none;
+          &::after {
+            font-family: "remixicon" !important;
+            content: "\eb99";
+            font-size: 28px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.top-banner{
+  background-image: url('../img/Top-Banner.jpg');
+  min-height: 400px;
+  .content{
+    width: 450px;
+    margin: 0 auto;
+    .h6{
+      font-size: 32px;
+    }
+    .h4{
+      font-size: 58px;
+    }
+    .line{
+      height: 2px;
+      background-color: $white;
+    }
+    p{
+      font-size: 22px ;
+    }
+  }
+}
+.heading{
+  .h1{
+    color: $blue-dark;
+    font-size: 36px;
+  }
+  h5{
+    color: $blue-dark;
+    font-size: 20px;
+  }
+}
+.speaker-wrapper{
+  &.bg-dark-blue{
+    background-color: $blue-dark;
+  }
+  .user-info{
+    .name{
+      font-size: 18px;
+    }
+    .event{
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+}
+.bg-footer{
+  background-color: $gray-900;
+  .social{
+    ul{
+      li{
+        float: right;
+        margin-left: 5px;
+        padding: 2px;
+        border: 1px solid $white;
+        border-radius: 100%;
+        i{
+          font-size: 20px;
+          position: relative;
+          top: 1px;
+        }
+      }
+    }
+  }
+}
